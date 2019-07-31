@@ -14,6 +14,11 @@ module.exports = function() {
           GuideName: channel.name,
           URL: `${config().tvheadend_url}/stream/channel/${channel.uuid}`
         })
+        lineup.push({
+          GuideNumber: String(1000 + channel.number),
+          GuideName: channel.name,
+          URL: `${config().tvheadend_url}/stream/channel/${channel.uuid}`
+        })
       }
     }
 
